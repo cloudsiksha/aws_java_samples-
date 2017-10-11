@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class S3ObjectOperations {
-	public static void uploadObject(String bucket_name, String key_name, String file_path){
+	public static void uploadObject(String bucket_name, String key_name, File file_path){
 	  final AmazonS3 s3 = AmazonS3ClientBuilder.defaultClient();
 	  try {
 	    s3.putObject(bucket_name, key_name, file_path);
